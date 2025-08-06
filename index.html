@@ -14,6 +14,9 @@
   background: linear-gradient(to bottom, #fff0f6, #fce4ec);
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -56,10 +59,14 @@ header p {
   to { opacity: 1; transform: translateY(0); }
 }
 
+main {
+  flex: 1;
+}
+
 section {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
@@ -67,22 +74,22 @@ section {
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #8e24aa;
-  margin-bottom: 1rem;
-}
-
-.service, .review {
   margin-bottom: 1.5rem;
 }
 
-.service strong, .review strong {
+.service {
+  margin-bottom: 2rem;
+}
+
+.service strong {
   color: #6a1b9a;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .buttons {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .buttons a {
@@ -102,11 +109,37 @@ h2 {
   transform: scale(1.05);
 }
 
+.review {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.review img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-content strong {
+  color: #6a1b9a;
+  font-size: 1.1rem;
+}
+
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   font-size: 0.9rem;
   color: #777;
+  background-color: #f3e5f5;
+  margin-top: 3rem;
 }
 
   </style>
@@ -116,45 +149,62 @@ footer {
     <h1>Гадалка Неля</h1>
     <p>Таро • Привороты • Предсказания • Энергетическая помощь</p>
     <p class="contact">📞 <strong>+380 97 510 1001</strong></p>
-  </header>  <div class="photo">
-    <img src="nelia.jpg" alt="Гадалка Неля с картами Таро">
-  </div>  <section class="services">
-    <h2>Мои Услуги</h2>
-    <div class="service">
-      <strong>🔮 Экспресс-расклад</strong><br>
-      Получите быстрый ответ на волнующий вопрос за 5 минут — <em>Бесплатно</em>
-    </div>
-    <div class="service">
-      <strong>🔮 Полный расклад</strong><br>
-      Глубокий анализ вашей ситуации, взгляд в будущее и совет — <em>30 минут / 25 €</em>
-    </div>
-    <div class="service">
-      <strong>❤️ Приворот</strong><br>
-      Работа с энергией любви. Безопасные ритуалы и настройка поля — <em>Индивидуально</em>
-    </div>
-    <div class="buttons">
-      <a href="https://wa.me/380975101001" target="_blank">Связаться в WhatsApp</a>
-      <a href="https://t.me/+380975101001" target="_blank">Написать в Telegram</a>
-    </div>
-  </section>  <section class="reviews">
-    <h2>Отзывы клиентов</h2>
-    <div class="review">
+  </header>  <main>
+    <div class="photo">
+      <img src="nelia.jpg" alt="Гадалка Неля с картами Таро">
+    </div><section class="services">
+  <h2>Мои Услуги</h2>
+  <div class="service">
+    <strong>🔮 Экспресс-расклад</strong><br>
+    Получите быстрый ответ на волнующий вопрос за 5 минут — <em>Бесплатно</em>
+  </div>
+  <div class="service">
+    <strong>🔮 Полный расклад</strong><br>
+    Глубокий анализ вашей ситуации, взгляд в будущее и совет — <em>30 минут / 25 €</em>
+  </div>
+  <div class="service">
+    <strong>❤️ Приворот</strong><br>
+    Работа с энергией любви. Безопасные ритуалы и настройка поля — <em>Индивидуально</em>
+  </div>
+  <div class="buttons">
+    <a href="https://wa.me/380975101001" target="_blank">Связаться в WhatsApp</a>
+    <a href="https://t.me/+380975101001" target="_blank">Написать в Telegram</a>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>Отзывы клиентов</h2>
+  <div class="review">
+    <img src="review1.jpg" alt="Анастасия">
+    <div class="review-content">
       <strong>Анастасия</strong><br>
       Спасибо огромное! Всё сбылось, вы открыли мне глаза на человека рядом.
     </div>
-    <div class="review">
+  </div>
+  <div class="review">
+    <img src="review2.jpg" alt="Марина">
+    <div class="review-content">
       <strong>Марина</strong><br>
       Очень глубокий расклад, получила точные советы. Обязательно вернусь!
     </div>
-    <div class="review">
+  </div>
+  <div class="review">
+    <img src="review3.jpg" alt="Елена">
+    <div class="review-content">
       <strong>Елена</strong><br>
       Объяснение было очень понятным, помогли разобраться с ситуацией в семье.
     </div>
-    <div class="review">
+  </div>
+  <div class="review">
+    <img src="review4.jpg" alt="Светлана">
+    <div class="review-content">
       <strong>Светлана</strong><br>
       Не ожидала, но всё было в точку. Неля — настоящая профессионалка.
     </div>
-  </section>  <footer>
+  </div>
+</section>
+
+  </main>  <footer>
     &copy; 2025 Гадалка Неля. Все права защищены.
   </footer>
 </body>
